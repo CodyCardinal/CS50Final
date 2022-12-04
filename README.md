@@ -3,7 +3,7 @@
 ![Atlas Holding a Brain instead of a globe](https://github.com/CodyCardinal/CS50Final/blob/main/static/atlasbrain.jpg?raw=true)
 
 Brain gains is my final project submission for [CS50X](https://cs50.harvard.edu/x/2022/)! 
-I've used Python, Flask, SQLlite, and Bootstrap Javascript.
+I've used Python, Flask, SQLite, and Bootstrap Javascript.
 
 ## [Video Demo](https://www.youtube.com/watch?v=qdZy8P7B4JA)
 
