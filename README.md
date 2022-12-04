@@ -3,6 +3,8 @@
 Brain gains is my final project submission for CS50X! 
 I've used Python, Flask, SQLAlchemy, and Bootstrap Javascript.
 
+## [Video Demo](https://www.youtube.com/watch?v=qdZy8P7B4JA)
+
 ## How to start:
 Start by Initializing the DB ( you can also use this to reset! ):
 ```py
