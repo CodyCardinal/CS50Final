@@ -8,10 +8,12 @@ import sqlite3
 # Initialize Flask
 app = Flask(__name__)
 
+
 def get_db_connection():
     con = sqlite3.connect('flashcards.db')
     con.row_factory = sqlite3.Row
     return con
+
 
 def get_question(topic: str = None, id: int = None):
     con = get_db_connection()
@@ -23,6 +25,7 @@ def get_question(topic: str = None, id: int = None):
         question = con.execute('SELECT * FROM questions WHERE id = ? AND topic = ?', (id, topic)).fetchone()
     con.close()
     return question
+
 
 def get_next_question(topic: str, id: int):
     con = get_db_connection()
@@ -37,6 +40,7 @@ def update_score(topic: str, id: int, score: int):
     con.commit()
     con.close()
 
+
 def select(topic: str = None) -> list:
     with get_db_connection() as con:
         # Select Distinct Topics
@@ -50,6 +54,7 @@ def select(topic: str = None) -> list:
             topics = con.execute('SELECT * FROM QUESTIONS').fetchall()
     con.close()
     return topics
+
 
 def update_sesh(id: int, score: int):
     sesh = get_sesh(id)
@@ -71,6 +76,7 @@ def update_sesh(id: int, score: int):
     con.close()
     return sesh
 
+
 def get_sesh(id: int):
     con = get_db_connection()
     sesh = con.execute('SELECT sesh FROM questions WHERE id = ?', (id,)).fetchone()
@@ -82,21 +88,25 @@ def get_sesh(id: int):
 @app.route('/', methods=('GET', 'POST'))
 def index():
     query = select('Topic')
-    return render_template('index.html', query = query)
+    return render_template('index.html', query=query)
+
 
 @app.route('/about')
 def about():
     return render_template('about.html')
 
+
 @app.route('/question/<topic>', methods=('GET', 'POST'))
 def question(topic: str = None):
     query = get_question(topic)
-    return render_template('question.html', query = query)
+    return render_template('question.html', query=query)
+
 
 @app.route('/next/<topic>/<id>', methods=('GET', 'POST'))
-def next(topic: str = None, id = None):
+def next(topic: str = None, id=None):
     query = get_question(topic, id)
-    return render_template('next.html', query = query)
+    return render_template('next.html', query=query)
+
 
 @app.route('/answer/<topic>/<id>', methods=('GET', 'POST'))
 def answer(topic, id):
@@ -131,7 +141,8 @@ def createnew():
         answer = request.form['Answer']
         sesh = 1
         with get_db_connection() as con:
-            con.execute('INSERT INTO QUESTIONS (SCORE, TOPIC, QUESTION, ANSWER, SESH) VALUES (?, ?, ?, ?, ?)', (score, topic, question, answer, sesh))
+            con.execute('INSERT INTO QUESTIONS (SCORE, TOPIC, QUESTION, ANSWER, SESH) VALUES (?, ?, ?, ?, ?)', 
+            (score, topic, question, answer, sesh))
             con.commit()
         con.close()
         return redirect(url_for('create'))
@@ -143,6 +154,7 @@ def create():
     query = select('Topic')
     return render_template('create.html', query=query)
 
+
 @app.route('/list', methods=('GET', 'POST'))
 def list():
     if request.method == 'POST':
@@ -152,6 +164,7 @@ def list():
         query = select()
         return render_template('list.html', query=query)
 
+
 @app.route('/edit/', methods=('GET', 'POST'))
 def edit():
     if request.method == 'POST':
@@ -160,6 +173,7 @@ def edit():
     else:
         query = select()
         return render_template('edit.html', query=query)
+
 
 if __name__ == '__main__':
     app.run()
