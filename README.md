@@ -3,6 +3,19 @@
 Brain gains is my final project submission for CS50X! 
 I've used Python, Flask, SQLAlchemy, and Bootstrap Javascript.
 
+## How to start:
+Start by Initializing the DB ( you can also use this to reset! ):
+```py
+python init_db.py
+```
+
+Now going forward just run the website with flask!
+
+```py
+flask run
+```
+
+
 Brain Gains is following the basic methods of the Leitner System. Test yourself after learning so that you can retain whatever you learned better. The use of spacing in our learning can lead to better retention of information. This is because the brain is better at remembering things that are spaced out over time. The Leitner System is a way to organize that spacing. This is similar to how a muscle should be broken down, and given time to repair itself stronger.
 
 ![Leitner Learning System](https://github.com/CodyCardinal/CS50Final/blob/main/static/2560px-Leitner_system_alternative.svg.png?raw=true)
