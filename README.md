@@ -1,7 +1,7 @@
 # BRAIN GAINS
 
 Brain gains is my final project submission for CS50X! 
-I've used Python, Flask, SQLAlchemy, and Bootstrap Javascript.
+I've used Python, Flask, SQLlite, and Bootstrap Javascript.
 
 ## [Video Demo](https://www.youtube.com/watch?v=qdZy8P7B4JA)
 
