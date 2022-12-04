@@ -31,15 +31,15 @@ In the above gif, we see that the first session starts with one container of que
 
 ## Detailed How-To
 
-Start by creating a few questions in a topic.
-Once the topic has around 20 questions stop creating questions.
-Go back to the home page and choose that topic.
-Proceed to read each question, mentally answer the question.
-Once you've answered it mentally, click to expand the answer.
-If you answered it correctly and easily, you would click Easy.
-If you answered it correctly, but not easily, click Good.
-If you failed to answer it, you would click Hard.
-Then proceed to the next question. Eventually you will be taken back to the front page.
-
-Come back and answer questions again tomorrow. Eventually you will notice that questions stop being offered to you.
-Once you aren't answered questions anymore, you can consider quizzing on a new topic.
+- Start by creating a few questions in a topic.
+- Once the topic has around 20 questions stop creating questions.
+- Go back to the home page and choose that topic.
+- Proceed to read each question, mentally answer the question.
+- Once you've answered it mentally, click to expand the answer.
+- If you answered it correctly and easily, you would click Easy.
+- If you answered it correctly, but not easily, click Good.
+- If you failed to answer it, you would click Hard.
+- Then proceed to the next question. Eventually you will be taken back to the front page.
+- 
+- Come back and answer questions again tomorrow. Eventually you will notice that questions stop being offered to you.
+- Once you aren't answered questions anymore, you can consider quizzing on a new topic.
