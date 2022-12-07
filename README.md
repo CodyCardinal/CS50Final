@@ -43,8 +43,8 @@ In the above gif, we see that the first session starts with one container of que
 ```mermaid
 graph TD;
 Correct-->Yes-->Easy
-Yes-->Not_Easy-->Good
 Correct-->No-->Hard
+Yes-->Not_Easy-->Good
 ```
 
 - Then proceed to the next question. Eventually you will be taken back to the front page.
